@@ -1,0 +1,31 @@
+@keyframes twinkle {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+  }
+  
+  .stars-sm::before,
+  .stars-md::before,
+  .stars-lg::before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: white;
+    box-shadow: 
+      10vw 10vh 1px white,
+      20vw 20vh 1px white,
+      /* Add many more random positions */;
+    animation: twinkle 4s infinite;
+  }
+  
+  .stars-md::before { 
+    width: 3px; 
+    height: 3px; 
+    animation-delay: 0.2s;
+  }
+  
+  .stars-lg::before { 
+    width: 4px; 
+    height: 4px; 
+    animation-delay: 0.4s;
+  }
